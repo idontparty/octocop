@@ -116,6 +116,11 @@ function main {
         key="$1"
 
         case "$key" in
+            -d|--dotfiles)
+                ./dotfiles.sh
+                shift # past argument
+                shift # past value
+                ;;
             -h|--help)
                 help
                 shift # past argument

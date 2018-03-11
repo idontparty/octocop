@@ -12,6 +12,8 @@ python-dev
 build-essential
 exuberant-ctags
 tmux
+fonts-powerline
+powerline
 [end]
 
 [desktop]
