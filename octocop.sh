@@ -10,8 +10,8 @@
 
 
 # Where the config files are located
-APT_LIST="$PWD/files/apt_list.txt"
-PIP_LIST="$PWD/files/pip_list.txt"
+APT_LIST="$PWD/lists/apt_list.txt"
+PIP_LIST="$PWD/lists/pip_list.txt"
 
 
 
@@ -32,7 +32,13 @@ function help {
 # Takes in the name of a sw group and creates a list over all the sw in the
 # group
 function group_parser {
+    FILE="$APT_LIST"
     GROUPNAME="$i"
+
+    if [[ "$1" =~ ^pip ]]; then
+        GROUPNAME="$1"
+        FILE="$PIP_LIST"
+    fi
     PACKAGES_LIST=""
     READ=false
 
@@ -46,7 +52,7 @@ function group_parser {
         elif [[ $READ == true ]]; then
             PACKAGES_LIST="$PACKAGES_LIST$line "
         fi
-    done < "$APT_LIST"
+    done < "$FILE"
 
     # DEBUG MESSAGE
     echo  "Packages for [$GROUPNAME]: $PACKAGES_LIST"
@@ -89,6 +95,16 @@ function print_usage {
 }
 
 
+function pip_installer {
+    group_parser "pip3"
+    echo "Pip installing for [PIP3]: $PACKAGES_LIST"
+    pip3 install $PACKAGES_LIST
+    group_parser "pip2"
+    echo "Pip installing for [PIP2]: $PACKAGES_LIST"
+    pip3 install $PACKAGES_LIST
+}
+
+
 # Main - does whatever the user tells it to
 function main {
     if [ $# -eq 0 ]; then
@@ -119,6 +135,11 @@ function main {
 
             -l|--list)
                 package_parser "$@"
+                shift # past argument
+                shift # past value
+                ;;
+            -p|--python)
+                pip_installer
                 shift # past argument
                 shift # past value
                 ;;

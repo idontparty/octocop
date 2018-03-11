@@ -7,5 +7,5 @@ Install and sets up
 - konsole
 - tmux
 - zsh (with oh-my-zsh)
-- neovim (with vim plugs)
+- neovim (with vim plugs and python support)
 

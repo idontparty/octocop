@@ -6,10 +6,8 @@ zsh
 neovim
 git
 python3-pip
-python3-neovim
 python3-dev
 python-pip
-python-neovim
 python-dev
 build-essential
 exuberant-ctags
