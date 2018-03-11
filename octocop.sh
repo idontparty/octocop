@@ -132,7 +132,7 @@ function main {
 
                 # Requires root
                 # Disabled for dev purposes
-                #apt install "$PACKAGES";
+                apt install $PACKAGES;
 
                 shift # past argument
                 shift # past value
