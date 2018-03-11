@@ -93,7 +93,7 @@ fi
 IPATH="/home/$USER"
 if [ ! -f "$IPATH/.tmux.conf" ]; then
     echo "[*] Linking .tmux.conf"
-    ln -s "$PWD/tmux.conf" "$IPATH/"
+    ln -s "$PWD/tmux.conf" "$IPATH/.tmux.conf"
 fi
 
 
