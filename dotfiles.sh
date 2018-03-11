@@ -108,7 +108,7 @@ fi
 IPATH="/home/$USER"
 if [ ! -f "$IPATH/.zshrc" ]; then
     echo "[*] Copying .zshrc."
-    ln -s "$PWD/.zshrc" "$IPATH"
+    ln -s "$PWD/zshrc" "$IPATH"
 
     # If relevant, run this manually
     echo "[!] Changing shell. You may be asked for your password"
