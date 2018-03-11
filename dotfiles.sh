@@ -53,10 +53,10 @@ if [ ! -d "$IPATH" ]; then
     mkdir -p "$IPATH"
 fi
 
-if [ ! -f "$IPATH/vim.plug" ]; then
+if [ ! -f "$IPATH/plug.vim" ]; then
     echo "[*] Downloading and moving vim-plug"
     wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    mv "$PWD/vim.plug" "$IPATH"
+    mv "$PWD/plug.vim" "$IPATH"
 fi
 
 
@@ -65,6 +65,13 @@ fi
 # ==== CONFIG ====
 # === Konsole - config ===
 IPATH="/home/$USER/.config"
+if [ ! -d "$IPATH" ]; then
+    mkdir -p "$IPATH"
+fi
+
+if [ -f "$IPATH/konsolerc" ]; then
+    rm "$IPATH/konsolerc"
+fi
 echo "[*] Linking the konsole config"
 ln -s "$PWD/konsolerc" "$IPATH"
 
