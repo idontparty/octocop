@@ -18,9 +18,9 @@ fi
 if [ ! -f "$IPATH/monokai.colorscheme" ]; then
     echo "[*] Installing monokai theme for Konsole"
 
-    if [ -f "$CWD/monokai.colorscheme" ]; then
+    if [ -f "$PWD/monokai.colorscheme" ]; then
         echo "[*] Linking monokai theme for Konsole"
-        ln -s "$CWD/monokai.colorscheme" "$IPATH"
+        ln -s "$PWD/monokai.colorscheme" "$IPATH"
     else
         echo "[*] Downloading and moving monokai theme for Konsole"
         wget "https://raw.githubusercontent.com/tommodore/monokai/master/Konsole/monokai.colorscheme"
@@ -66,7 +66,7 @@ fi
 # === Konsole - config ===
 IPATH="/home/$USER/.config"
 echo "[*] Linking the konsole config"
-ln -s "$CWD/konsolerc" "$IPATH/"
+ln -s "$PWD/konsolerc" "$IPATH"
 
 
 
@@ -74,7 +74,7 @@ ln -s "$CWD/konsolerc" "$IPATH/"
 IPATH="/home/$USER/.local/share/konsole/"
 if [ ! -f "$IPATH/hacker.profile" ]; then
     echo "[*] Linking the konsole config hacker.profile"
-    ln -s "$CWD/hacker.profile" "$IPATH"
+    ln -s "$PWD/hacker.profile" "$IPATH"
 fi
 
 # === nvim - config ===
@@ -85,7 +85,7 @@ fi
 
 if [ ! -f "$IPATH/init.vim" ]; then
     echo "[*] Linking init.vim"
-    ln -s "$CWD/init.vim" "$IPATH"
+    ln -s "$PWD/init.vim" "$IPATH"
 fi
 
 
@@ -93,7 +93,7 @@ fi
 IPATH="/home/$USER"
 if [ ! -f "$IPATH/.tmux.conf" ]; then
     echo "[*] Linking .tmux.conf"
-    ln -s "$CWD/tmux.conf" "$IPATH/"
+    ln -s "$PWD/tmux.conf" "$IPATH/"
 fi
 
 
