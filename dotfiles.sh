@@ -38,7 +38,8 @@ if [ ! -d "$IPATH" ]; then
 fi
 
 # === TMUX Plugin Manager - TPM ===
-$IPATH="/home/$USER/.tmux/plugins/tpm"
+IPATH="/home/$USER/.tmux/plugins/tpm"
+echo "DEBUG: $IPATH"
 if [ ! -d "$IPATH" ]; then
     echo "[*] Downloading TPM - plugin manager for tmux"
     git clone https://github.com/tmux-plugins/tpm "$IPATH"
@@ -63,14 +64,14 @@ fi
 
 # ==== CONFIG ====
 # === Konsole - config ===
-$IPATH="/home/$USER/.config"
+IPATH="/home/$USER/.config"
 echo "[*] Linking the konsole config"
 ln -s "$CWD/konsolerc" "$IPATH/"
 
 
 
 # === Konsole - profile ===
-$IPATH="/home/$USER/.local/share/konsole/"
+IPATH="/home/$USER/.local/share/konsole/"
 if [ ! -f "$IPATH/hacker.profile" ]; then
     echo "[*] Linking the konsole config hacker.profile"
     ln -s "$CWD/hacker.profile" "$IPATH"
