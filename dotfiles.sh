@@ -60,16 +60,6 @@ if [ ! -f "$IPATH/plug.vim" ]; then
 fi
 
 
-# === XFCE Rele theme ===
-IPATH="/home/$USER/.local/share/themes/"
-if [ ! -d "$IPATH" ]; then
-    mkdir -p "$IPATH"
-fi
-
-echo "[*] Installing the Rele theme for xfce"
-cp -r "$PWD/themes/Rele" "$IPATH"
-
-
 # ==== CONFIG ====
 # === Konsole - config ===
 IPATH="/home/$USER/.config"
