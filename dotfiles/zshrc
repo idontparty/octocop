@@ -4,8 +4,8 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-# Color stuff
-export TERM="screen-256color"
+# Color stuff - This causes a bug
+#export TERM="screen-256color"
 
 # Rm * gives sanity check
 setopt RM_STAR_WAIT

@@ -60,6 +60,14 @@ if [ ! -f "$IPATH/plug.vim" ]; then
 fi
 
 
+# === XFCE Rele theme ===
+IPATH="/home/$USER/.local/share/themes/"
+if [ ! -d "$IPATH" ]; then
+    mkdir -p "$IPATH"
+fi
+
+echo "[*] Installing the Rele theme for xfce"
+cp -r "$PWD/themes/Rele" "$IPATH"
 
 
 # ==== CONFIG ====
@@ -114,5 +122,23 @@ if [ ! -f "$IPATH/.zshrc" ]; then
     echo "[!] Changing shell. You may be asked for your password"
     chsh -s "/bin/zsh"
 fi
+
+# ==== XFCE 4 Themes ====
+# === RELE theme ===
+IPATH="/home/$USER/.local/share/themes/"
+if [ ! -d "$IPATH/Rele" ]; then
+    mkdir -p "$IPATH"
+fi
+echo "[*] Installing the Rele theme for XFCE"
+cp -r "$PWD/themes/Rele" "$IPATH"
+
+
+# === XFCE config ===
+IPATH="/home/$USER/.config/xfconf/"
+if [ ! -d "$IPATH" ]; then
+    mkdir "$IPATH"
+fi
+echo "[*] Installing the xfce config files"
+cp -r "$PWD/xfce/xfce-perchannel-xml" "$IPATH"
 
 
