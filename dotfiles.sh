@@ -130,7 +130,7 @@ if [ ! -d "$IPATH/Rele" ]; then
     mkdir -p "$IPATH"
 fi
 echo "[*] Installing the Rele theme for XFCE"
-cp -r "$PWD/themes/Rele" "$IPATH"
+cp -r "$PWD/../themes/Rele" "$IPATH"
 
 
 # === XFCE config ===
@@ -139,6 +139,6 @@ if [ ! -d "$IPATH" ]; then
     mkdir "$IPATH"
 fi
 echo "[*] Installing the xfce config files"
-cp -r "$PWD/xfce/xfce-perchannel-xml" "$IPATH"
+cp -r "$PWD/../xfce/xfce-perchannel-xml" "$IPATH"
 
 
