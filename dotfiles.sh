@@ -129,8 +129,11 @@ IPATH="/home/$USER/.local/share/themes/"
 if [ ! -d "$IPATH/Rele" ]; then
     mkdir -p "$IPATH"
 fi
+
+cd ..
 echo "[*] Installing the Rele theme for XFCE"
 cp -r "$PWD/../themes/Rele" "$IPATH"
+cd "dotfiles"
 
 
 # === XFCE config ===
@@ -138,7 +141,9 @@ IPATH="/home/$USER/.config/xfconf/"
 if [ ! -d "$IPATH" ]; then
     mkdir "$IPATH"
 fi
+cd ..
 echo "[*] Installing the xfce config files"
 cp -r "$PWD/../xfce/xfce-perchannel-xml" "$IPATH"
+cd "dotfiles"
 
 
