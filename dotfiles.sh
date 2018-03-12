@@ -132,7 +132,7 @@ fi
 
 cd ..
 echo "[*] Installing the Rele theme for XFCE"
-cp -r "$PWD/../themes/Rele" "$IPATH"
+cp -r "$PWD/themes/Rele" "$IPATH"
 cd "dotfiles"
 
 
@@ -143,7 +143,7 @@ if [ ! -d "$IPATH" ]; then
 fi
 cd ..
 echo "[*] Installing the xfce config files"
-cp -r "$PWD/../xfce/xfce-perchannel-xml" "$IPATH"
+cp -r "$PWD/xfce/xfce-perchannel-xml" "$IPATH"
 cd "dotfiles"
 
 
