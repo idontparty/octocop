@@ -127,7 +127,7 @@ cd "dotfiles"
 
 
 # === XFCE config ===
-IPATH="/home/$USER/.config/xfconf/"
+IPATH="/home/$USER/.config/xfce4/xfconf/"
 if [ ! -d "$IPATH" ]; then
     mkdir "$IPATH"
 fi
