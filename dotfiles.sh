@@ -129,7 +129,7 @@ cd "dotfiles"
 # === XFCE config ===
 IPATH="/home/$USER/.config/xfce4/xfconf/"
 if [ ! -d "$IPATH" ]; then
-    mkdir "$IPATH"
+    mkdir -p "$IPATH"
 fi
 cd ..
 echo "[*] Installing the xfce config files"
