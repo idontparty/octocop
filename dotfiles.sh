@@ -143,6 +143,8 @@ if [ ! -d "$IPATH" ]; then
     mkdir -p "$IPATH"
 fi
 
+echo "[*] Moving the wallpaper to $IPATH"
+echo "[!] You have to manually set the wallpaper."
 cp "../black-hex.jpg" "$IPATH"
 
 
