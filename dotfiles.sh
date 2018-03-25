@@ -136,4 +136,13 @@ echo "[*] Installing the xfce config files"
 cp -r "$PWD/xfce/xfce-perchannel-xml" "$IPATH"
 cd "dotfiles"
 
+# === Wallpaper ===
+# Need to set manually from settings
+IPATH="/home/$USER/Pictures/"
+if [ ! -d "$IPATH" ]; then
+    mkdir -p "$IPATH"
+fi
+
+cp "../black-hex.jpg" "$IPATH"
+
 
