@@ -24,7 +24,6 @@ vlc
 
 [xfce]
 task-xfce-desktop
-xfce-desktop
 [end]
 
 
