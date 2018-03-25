@@ -101,7 +101,7 @@ function pip_installer {
     pip3 install $PACKAGES_LIST
     group_parser "pip2"
     echo "Pip installing for [PIP2]: $PACKAGES_LIST"
-    pip3 install $PACKAGES_LIST
+    pip2 install $PACKAGES_LIST
 }
 
 
