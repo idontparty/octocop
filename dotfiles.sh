@@ -109,8 +109,8 @@ if [ ! -f "$IPATH/.zshrc" ]; then
     ln -s "$PWD/zshrc" "$IPATH/.zshrc"
 
     # If relevant, run this manually
-    echo "[!] Changing shell. You may be asked for your password"
-    chsh -s "/bin/zsh"
+    #echo "[!] Changing shell. You may be asked for your password"
+    #chsh -s "/bin/zsh"
 fi
 
 # ==== XFCE 4 Themes ====
