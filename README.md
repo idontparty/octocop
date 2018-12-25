@@ -1,11 +1,7 @@
 # octocop
-
-Install script for debian packages along with dotfiles, plugins, etc
-
----
-Install and sets up
+## Dotfiles
+Dotfiles for
 - konsole
-- tmux
+- tmux (with TPM)
 - zsh (with oh-my-zsh)
-- neovim (with vim plugs and python support)
-
+- neovim (with vim plugs)

@@ -3,7 +3,6 @@
 # dotfiles.sh
 # Steffen Johansen
 # Installs config files - room for lots of optimization
-# Will error if already linked I believe
 
 # Go to the directory of all the dotfiles
 DOTFILES="$PWD/dotfiles"
@@ -113,28 +112,6 @@ if [ ! -f "$IPATH/.zshrc" ]; then
     #chsh -s "/bin/zsh"
 fi
 
-# ==== XFCE 4 Themes ====
-# === RELE theme ===
-IPATH="/home/$USER/.local/share/themes/"
-if [ ! -d "$IPATH/Rele" ]; then
-    mkdir -p "$IPATH"
-fi
-
-cd ..
-echo "[*] Installing the Rele theme for XFCE"
-cp -r "$PWD/themes/Rele" "$IPATH"
-cd "dotfiles"
-
-
-# === XFCE config ===
-IPATH="/home/$USER/.config/xfce4/xfconf/"
-if [ ! -d "$IPATH" ]; then
-    mkdir -p "$IPATH"
-fi
-cd ..
-echo "[*] Installing the xfce config files"
-cp -r "$PWD/xfce/xfce-perchannel-xml" "$IPATH"
-cd "dotfiles"
 
 # === Wallpaper ===
 # Need to set manually from settings
@@ -148,3 +125,5 @@ echo "[!] You have to manually set the wallpaper."
 cp "../black-hex.jpg" "$IPATH"
 
 
+
+echo "[!] You have to manually run chsh."

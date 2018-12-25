@@ -20,6 +20,7 @@ set showmatch                           " Show matching brackets
 set textwidth=79                        " Linebreak at 79
 set colorcolumn=81                      " ruler at 81
 set clipboard+=unnamedplus              " Default register is systemclipboard
+set mouse=a                             " Scroll with mice
 
 " EOL characters
 set list                                " Show empty space
@@ -48,7 +49,7 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'xolox/vim-misc'
 
   " vim-easytags - automated tag generation and syntax highlighting
-  Plug 'xolox/vim-easytags'
+  "Plug 'xolox/vim-easytags'
 
   " Tagbar - class outline viewer for vim
   Plug 'majutsushi/tagbar'
@@ -66,7 +67,7 @@ call plug#begin('~/.local/share/nvim/plugged')
   ""Plug 'spf13/vim-autoclose'
 
   "Deoplete - auto complete for neovim
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 call plug#end()
 
@@ -83,7 +84,7 @@ set wildignore=*.swp,*.bak,*.pyc,*.class
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " use deoplete.
 ""let g:deoplete#enable_at_startup = 1
-call deoplete#enable()
+"call deoplete#enable()
 
 
 
@@ -92,11 +93,14 @@ call deoplete#enable()
 "true colors in the terminal
 set termguicolors
 
+
 " Theme
 colorscheme molokai
 
 " airline theme
-let g:airline_theme='wombat'
+let g:airline_theme='violet'
+"let g:Powerline_symbols = 'fancy'
+let g:airline_powerline_fonts = 1
 
 
 

@@ -1,7 +1,0 @@
-[pip3]
-neovim
-[end]
-
-[pip2]
-neovim
-[end]
