@@ -55,7 +55,7 @@ ZSH_THEME="sunaku"
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="dd/mm/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -65,13 +65,17 @@ HIST_STAMPS="mm/dd/yyyy"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 #
-plugins=(gitfast jsontools encode64 pip tmux ssh-agent)
+plugins=(git gitfast jsontools encode64 pip tmux ssh-agent)
 
 # Add key to ssh agent every time on boot
 if [ -z "$SSH_AUTH_SOCK" ] ; then
     eval `ssh-agent -s`
     ssh-add
 fi
+
+# Plugin configuration - TMUX
+
+
 
 
 # User configuration
