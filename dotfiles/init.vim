@@ -69,6 +69,9 @@ call plug#begin('~/.local/share/nvim/plugged')
   "Deoplete - auto complete for neovim
   "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
+  " vim-go - golang integration
+  Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
 call plug#end()
 
 
