@@ -72,6 +72,9 @@ call plug#begin('~/.local/share/nvim/plugged')
   " vim-go - golang integration
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
+  " Vim-wiki - Personal wiki
+  Plug 'vimwiki/vimwiki'
+
 call plug#end()
 
 
